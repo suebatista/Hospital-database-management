@@ -1,0 +1,5 @@
+CREATE DATABASE Hosp_Management
+CREATE TABLE DOCTOR(doc_id integer PRIMARY KEY, Name text, Specialization text not null);
+CREATE TABLE PATIENT(card_id integer PRIMARY KEY,Name text, Diagnosis text not null,Date_CheckIn datetime not null,Date_CheckOut);
+CREATE TABLE HOSPITAL(hosp_id text PRIMARY KEY,Location text)
+CREATE TABLE COVID_TEST(test_id integer PRIMARY KEY, doc_id FOREIGN KEY, card_id FOREIGN KEY,Test_date datetime, Test_Time datetime,Result varchar(8)
